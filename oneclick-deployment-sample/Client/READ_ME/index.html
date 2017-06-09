@@ -1,0 +1,1113 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>My Sample App - Developer Instructions</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css" media="screen, projection">
+        <script>var runOnLoad=function(c,o,d,e){function x(){for(e=1;c.length;)c.shift()()}o[d]?(document[d]('DOMContentLoaded',x,0),o[d]('load',x,0)):o.attachEvent('onload',x);return function(t){e?o.setTimeout(t,0):c.push(t)}}([],window,'addEventListener');</script>
+        <script type="text/javascript" src="js/CollapsibleLists.compressed.js">
+        </script>
+        <script type="text/javascript">
+            runOnLoad(function() { CollapsibleLists.apply(); });
+        </script>
+    </head>
+    <body>
+
+    <h3 class="align-center">
+        <img src="img/ic_launcher.png" width="128px"/><br/>
+My Sample App
+    </h3>
+<p>
+This download package contains an Xcode project for a fully functioning Mobile App, which uses your configured AWS resources and identifiers, to demonstrate the project features you've selected. You can use this project as a starting point for your own product development, or you can follow the instructions below to copy and paste the required code into your own product.
+</p>
+<p>
+<strong> IMPORTANT: </strong>This package was custom generated for you, using your selected project options. It contains your own resource and account identifiers and should be kept private.<br/><br/>
+</p>
+
+        <div id="listContainer">
+            <ul class="collapsibleList">
+
+<!-- begin - heading = Setup -->
+
+  <li>
+Setup
+    <ul>
+
+<!-- begin - sub-heading = Setup -->
+
+      <li>
+Integrated Development Environment
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+1. System Requirements</b></p><br/>
+
+Your system must include the following:</br>&nbsp;&nbsp;- Xcode 7.1 or newer
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+2. Install Xcode</b></p><br/>
+
+If you have not already installed the Xcode IDE (Integrated Development Environment) on your host, you can do download it from the following location:
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_blank" HREF="https://developer.apple.com/xcode/download">https://developer.apple.com/xcode/download</A></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Integrated Development Environment -->
+
+    </ul>
+  </li>
+
+<!-- end - heading = Setup -->
+
+
+<!-- begin - heading = Compile and Run -->
+
+  <li>
+Compile and Run
+    <ul>
+
+<!-- begin - sub-heading = Compile and Run -->
+
+      <li>
+Launch App
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+3. Open MySampleApp Project in Xcode</b></p><br/>
+
+Once you have downloaded and unzipped the sample app project files, please open Xcode and choose...<br/><p><b>Open another project...</b></p><br/>Find the folder where you unzipped the zip file and select the "MySampleApp/MySampleApp.xcodeproj" file. Xcode will open the project.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+4. Run MySampleApp</b></p><br/>
+
+Once Xcode finishes opening the project choose...<br/><p><b>Project -&gt; Run</b></p><br/>Xcode will build and launch the app on a device or on the iOS Simulator.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Launch App -->
+
+
+<!-- begin - sub-heading = Compile and Run -->
+
+      <li>
+User Identity - Try It!
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+5. Demonstrate User Identity</b></p><br/>
+
+Launch MySampleApp on a device or on the iOS Simulator. If you've selected to enable User Sign-in as required in your project, the sign-in page will launch and you should sign in to the app. If you've selected to enable User Sign-in as optional, tap the "Sign-In" button on the top right to launch the sign-in page. Sign-in to one of the providers you have set up and it should take you back to the main screen and the "Sign-In" button will change to "Sign-Out". Then, tap on the "User Sign-in" demonstration section of the App and tap on the "Demo User Identity" button at the bottom. You will see a unique identifier for the user as well as a name for the user. This unique identifier identifies the user to AWS systems and provides the user temporary permissions to access your configured AWS resources.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+6. Verify User Identity</b></p><br/>
+
+Find the Cognito Identity Pool that your project is using. You can check which identity pool your project is using by going to the "Resources" section in the Mobile Hub console. The name of the identity pool should match the name of your project appended by "MOBILEHUB".<br/><br/> Go to the AWS Cognito console. Click on the Cognito Identity Pool for your project and you will see that the "Total identities" value is now greater than zero. If you used Facebook or Google Login then you will see the number of authenticated users for that provider under the "Authentication methods" in the Cognito console.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_blank" HREF="https://console.aws.amazon.com/cognito/">https://console.aws.amazon.com/cognito/</A></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = User Identity - Try It! -->
+
+
+<!-- begin - sub-heading = Compile and Run -->
+
+      <li>
+User Files - Try It!
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+7. Demonstrate User File Storage</b></p><br/>
+
+Launch MySampleApp on a device or on the iOS Simulator and click on the "User Data Storage" demonstration section of the app. Click the "Demo User File Storage" button on the bottom of the page, and it will load the files in the S3 bucket created for your project. By default you will have a public and a private folder. Your private folder can only be accessed if you login to the sample app. You can find the name of the S3 bucket in the "Resources" section of the Mobile Hub console. You can open a menu with options you can perform on your bucket by tapping on the action button on the top right corner.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+8. Verify User File Storage</b></p><br/>
+
+Launch MySampleApp on a device or on the iOS Simulator and click on the "User Data Storage" demonstration section of the app. Click the "Demo User File Storage" button on the bottom of the page, and it will load the files in the S3 bucket created for your project. Tap on the action button on the top right corner, a menu will appear, tap on "Upload", choose an image from your photos, choose a name for this file and tap "Done". A progress bar will display the file name you chose. After the upload is complete, tap on the row for the file and tap "Download" to download the file to the local storage of the app. After the file has downloaded successfully, you may open or delete it by tapping on it again.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = User Files - Try It! -->
+
+
+<!-- begin - sub-heading = Compile and Run -->
+
+      <li>
+User Profile Data - Try It!
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+9. Demonstrate User Profile Data</b></p><br/>
+
+Launch MySampleApp on a device or on the iOS Simulator and click on the "User Data Storage" demonstration section of the app. Click the "Demo User Profile Data" button on the bottom of the page, and it will load the profile data for the current user and update the appearance with the user's theme. You will see four buttons which allow you to update the theme for the current user. Try changing the theme for the current user by tapping on one of the buttons.<br/>In order to sync user profile data across multiple devices, the user must sign in using an identity provider, such as Facebook or Google.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+10. Verify Unauthenticated User Profile Data</b></p><br/>
+
+Launch MySampleApp on a device or on the iOS Simulator and click on the "User Data Storage" demonstration section of the app. Click the "Demo User Profile Data" button on the bottom of the page, and pick a different color theme. The color theme is saved to the user's profile data. Now to verify that it was saved correctly, re-run the app on the same device or simulator. The color theme should be the same as the one you previously selected.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+11. Verify Authenticated User Profile Data</b></p><br/>
+
+Launch MySampleApp on a device or on the iOS Simulator and click on the "User Data Storage" demonstration section of the app. Click the "Demo User Profile Data" button on the bottom of the page, and pick a different color theme. The color theme is saved to the user's profile data. Now to verify that it was saved correctly, install the "MySampleApp" on a different device or run it on a different Simulator than the one you previously used. Sign in with the same user and you should see the color theme change to the one you previously selected.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = User Profile Data - Try It! -->
+
+
+<!-- begin - sub-heading = Compile and Run -->
+
+      <li>
+NoSQL Database - Try It!
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+48. Demonstrate NoSQL Database</b></p><br/>
+
+<p>Launch MySampleApp in the iOS simulator and click on the "NoSQL Database" section of the app and then click "Demo NoSQL Database" at the bottom of the next screen. You will see a list of the DynamoDB tables that were added to your project. Tap on the table that you would like to use in the demo.</p><p>A list of example operations to view data in your table will now be shown. Tap the "Insert Sample Data" button in the bottom left of the screen to add random sample data to your table. Click on any of the list items to demonstrate running get, query, and scan operations on your table. When you are done, click on "Remove Sample Data" in the bottom right to remove the data that was inserted by the demo.</p>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+49. Verify Data in DynamoDB Console</b></p><br/>
+
+Go to the Amazon DynamoDB console. You can click the table name in the "Resources" panel within Mobile Hub to navigate directly to your table in the Amazon DynamoDB console. Once you have inserted sample data into one of your tables, you will see it reflected in the DynamoDB console under the "items" tab for your table. Also, any entries you add to your table from the console will be reflected in the app when you use the Scan without Filter operation in the sample app.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = NoSQL Database - Try It! -->
+
+    </ul>
+  </li>
+
+<!-- end - heading = Compile and Run -->
+
+
+<!-- begin - heading = Discover -->
+
+  <li>
+Discover
+    <ul>
+
+<!-- begin - sub-heading = Discover -->
+
+      <li>
+What's in here?
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+12. Project Folders</b></p><br/>
+
+The project contains a number of folders under MySampleApp/MySampleApp/, which contain source code. Here is a brief explanation of those folders and what they contain.<br/><br/>&nbsp;&nbsp;- <B>Demo</B> - Demonstration features, you can clone and edit for your own app or discard.<br/>&nbsp;&nbsp;- <B>App</B> - Example Application user interface and logic, you can clone and edit for your own app or discard.<br/>&nbsp;&nbsp;- <B>AmazonAws</B> - Middle layer helper code, simplifies use of various SDKs and adds functionality.<br/>&nbsp;&nbsp;- <B>Sdk</B> - Software development kits</B>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+13. Identity Manager - Identifies the User</b></p><br/>
+
+This section simply provides information about the generated code in the MySampleApp project.<br/><br/>
+
+The AWS Identity Manager keeps track of the identity of the current app user, by storing the user's Amazon Cognito Identity ID. In order to do this, the identity manager handles some of the App Delegate calls from the iOS platform, and it is partially responsible for signing the user in to the app, regardless of whether a third party identity provider, such as Facebook or Google, is in use.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/AmazonAws/AWSMobileHubHelper.framework/Headers/AWSIdentityManager.h">MySampleApp/MySampleApp/AmazonAws/AWSMobileHubHelper.framework/Headers/AWSIdentityManager.h</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+14. User File Manager - Transfers Public and Private Files</b></p><br/>
+
+This section simply provides information about the generated code in the MySampleApp project.<br/><br/>
+
+The User File Manager uploads and downloads files from Amazon S3. It caches downloaded files locally on the device in a size-limited cache. Downloaded files may be pinned to the cache, so that they are not automatically removed when the cache size limit is exceeded. The User File Manager provides access to two folders in the Amazon S3 bucket, one called "public/" for public files, which are accessible to any user of the app, and one called "private/" which contains a sub-folder for each Amazon Cognito identified user that is signed-in to the app. Files in the user's private folder can only be accessed by that user. The User File Manager serves as the application's interface into the file-related functionality of the User Data Storage feature.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/AmazonAws/AWSMobileHubHelper.framework/Headers/AWSUserFileManager.h">MySampleApp/MySampleApp/AmazonAws/AWSMobileHubHelper.framework/Headers/AWSUserFileManager.h</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+15. Cognito Sync Client - Stores and Syncs User Profile Data</b></p><br/>
+
+This section simply provides information about the generated code in the MySampleApp project.<br/><br/>
+
+User Profile Data is part of the User Data Storage feature. It allows you to save key/value pairs in datasets for each user of your mobile app. This can be used to store things like game progress or user settings. For users who sign in to the app, those datasets will be synchronized across all of the user's devices. This functionality is provided by the Amazon Cognito Sync service, and the Amazon Cognito Sync client is the application's interface to that service. There is no additional bootstrapping required to get an instance of the Amazon Cognito Sync client beyond what is already done by the AWS Mobile Client.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserSettings/ColorThemeSettings.swift">MySampleApp/MySampleApp/Demo/UserSettings/ColorThemeSettings.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>40</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>    func loadSettings(_ completionBlock: @escaping (ColorThemeSettings?, Error?) -> Void) {</PRE></TD></TR><TR><TD><PRE>41</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        let syncClient: AWSCognito = AWSCognito.default()</PRE></TD></TR><TR><TD><PRE>42</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>        let userSettings: AWSCognitoDataset = syncClient.openOrCreateDataset("user_settings")</PRE></TD></TR><TR><TD><PRE>43</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>        </PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+16. NoSQL Demo Code - Demonstrate Amazon DynamoDB Table Operations</b></p><br/>
+
+This section simply provides information about the generated code in the MySampleApp project.<br/><br/>
+
+Your generated Sample App contains a demonstration of using the DynamoDB Mapper to perform queries and scans against the NoSQL tables you configured in your Mobile Hub project. The following folder contains all the code for the NoSQL Demo. The *Table.swift files contain the example code to demonstrate insert, remove, query, and scan operations against your tables. The files named <YourTableName>.swift is the model class for your configured table. The DynamoDB object mapper uses these annotated model  classes to provide convenient marshaling between your Swift App and DynamoDB's JSON requests and responses.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/NoSQL">MySampleApp/MySampleApp/Demo/NoSQL</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = What's in here? -->
+
+
+<!-- begin - sub-heading = Discover -->
+
+      <li>
+Where can I learn more?
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+17. AWS Mobile SDK for iOS</b></p><br/>
+
+All of the code in the sample app is built on top of the AWS Mobile SDKs. The SDKs that are included in your download depend on which features you've enabled in your project. You may want to use more advanced capabilities directly in the one of the AWS Mobile SDKs. To learn more, visit
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_blank" HREF="http://docs.aws.amazon.com/mobile/sdkforios/developerguide/">http://docs.aws.amazon.com/mobile/sdkforios/developerguide/</A></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+18. Helper Library API Reference</b></p><br/>
+
+The project includes a helper library which is built on top of the AWS iOS SDK. To see all the available functionality please refer the API documentation in the READ_ME/APIReference folder of the project download.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_blank" HREF="null">null</A></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Where can I learn more? -->
+
+    </ul>
+  </li>
+
+<!-- end - heading = Discover -->
+
+
+<!-- begin - heading = Develop -->
+
+  <li>
+Develop
+    <ul>
+
+<!-- begin - sub-heading = Develop -->
+
+      <li>
+Development Methods
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+19. Starter versus Example</b></p><br/>
+
+There are two convenient ways you can use what is provided in MySampleApp to enable your own app project with your configured features and cloud resources. You can use MySampleApp as a starter app, and build your own app on top of it. Alternatively, you can use MySampleApp as an example, and copy and paste the source code from MySampleApp into your own app project.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Development Methods -->
+
+
+<!-- begin - sub-heading = Develop -->
+
+      <li>
+Use as a Starter App
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+20. Use MySampleApp as a Starter App</b></p><br/>
+
+When you use MySampleApp as a starter app for your own app project, it serves as a starting point for your own App development. Remove the "demo" features, replace the app name and package name, build in your own app logic and user interface, and you're done!
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+21. Remove the "demo" features</b></p><br/>
+
+You may delete the "Demo" folder, which contains the examples demonstrating the features you've enabled in your project. You might want to keep snippets of the examples to use in your own code. You should also modify the Main.storyboard file with your application's own user interface and modify the SplashViewController and MainViewController, as you see fit for your application.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+22. Rename the Project</b></p><br/>
+
+To rename the project follow these instructions:
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_blank" HREF="https://developer.apple.com/library/ios/recipes/xcode_help-project_editor/RenamingaProject/RenamingaProject.html">https://developer.apple.com/library/ios/recipes/xcode_help-project_editor/RenamingaProject/RenamingaProject.html</A></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+23. Rename the App</b></p><br/>
+
+In order to rename the App double click on the Target "MySampleApp" and rename it to the name of your application.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+24. Set your Bundle ID</b></p><br/>
+
+Your bundle ID should be formatted as a reverse-domain string, for example: com.MyCompany.MyProductName. For more instructions on how to change your bundle ID go here:
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_blank" HREF="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html#//apple_ref/doc/uid/TP40012582-CH28-SW16">https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/ConfiguringYourApp/ConfiguringYourApp.html#//apple_ref/doc/uid/TP40012582-CH28-SW16</A></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+25. Configure App Services</b></p><br/>
+
+Configure your app services by enabling capabilities in the project settings. Services such as In-App Purchase, Push Notification, Game Center, iCloud and many more can be configured by following the instructions here:
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_blank" HREF="https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html#//apple_ref/doc/uid/TP40012582-CH26-SW1">https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/AddingCapabilities/AddingCapabilities.html#//apple_ref/doc/uid/TP40012582-CH26-SW1</A></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Use as a Starter App -->
+
+
+<!-- begin - sub-heading = Develop -->
+
+      <li>
+Use as an Example
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+26. Use MySampleApp as an Example</b></p><br/>
+
+When you use MySampleApp as an example, you learn from what is demonstrated in MySampleApp and copy and paste the parts you need. This section explains the steps needed to copy and paste the MySampleApp functionality into your own app project.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+27. Copy the SDKs</b></p><br/>
+
+Please copy this folder and all of its sub-folders from the MySampleApp project into your project.<br/><br/>
+
+This folder contains the required SDKs (software development kits) that will be used to support your project. Copy the contents of the "Sdk" folder into your Xcode project by dragging and dropping the folder from a Finder window into Xcode. When prompted by Xcode, check "Copy item if needed" and select "Create folder references".
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Sdk">MySampleApp/MySampleApp/Sdk</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+28. Add the AWS SDKs as Embed Frameworks</b></p><br/>
+
+Please copy this folder and all of its sub-folders from the MySampleApp project into your project.<br/><br/>
+
+Embed and link the AWS Frameworks found in that folder or its subfolders by adding them to your target project. In XCode you can do this by navigating to the project info General tab. Click the + symbol in the "Embedded Binaries" section, choose "Add Other..." in the "Choose items to add:" dialog, then navigate to and select all AWS Frameworks from your MySampleApp Project.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Sdk/Aws">MySampleApp/MySampleApp/Sdk/Aws</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+29. Add a Run Script phase to your project</b></p><br/>
+
+After adding the AWS SDKs as Embed Frameworks, under the Build Phases tab in your Target, click the + button on the top left and then select New Run Script Phase. Add the following line in the text box: <br /><br />bash "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework/strip-frameworks.sh" <br /><br />This step is required for the app to be published on the iTunes App Store.
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+30. Copy the Mobile Hub Helper</b></p><br/>
+
+Please copy this folder and all of its sub-folders from the MySampleApp project into your project.<br/><br/>
+
+This folder contains a helper framework which simplifies the use of all the SDKs that are required to support your project. Copy the contents of the "AmazonAws" folder into your own project and add a group for it in your Xcode project. It also contains the AWSMobileClient.swift file which bootstraps the app. It is a singleton component which creates an identity manager to establish the user identity with Amazon Cognito.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/AmazonAws">MySampleApp/MySampleApp/AmazonAws</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+31. Copy the AWS Configuration for features configured by you</b></p><br/>
+
+Please copy this file from the MySampleApp project into your own project.<br/><br/>
+
+This file has been generated for you, based on your project configuration and on your AWS cloud resources. It contains your private identifiers, which the application will use to access AWS services. For copying the configuration to your own project, open the Project Settings of the Sample App and go to the "Info" section. Click the "AWS" key in the Info section and copy it by Command+C or by Right Click->Copy. Open the Project Settings of your project and in the "Info" tab, paste the copied Key. Your project's "Info" section should have a Key named "AWS" now, which contains all your private identifiers.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/App/SupportingFiles/Info.plist">MySampleApp/MySampleApp/App/SupportingFiles/Info.plist</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+32. Add the dependency frameworks for AWS iOS SDK</b></p><br/>
+
+Open the target for your project, select Build Phases, expand Link Binary With Libraries, click the + button, and add libsqlite3.tbd and libz.tbd
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+33. Start AWSMobileClient</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+You must copy this file from the App/ folder add this call to configure the AWSMobileClient in your ApplicationDelegate.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/App/AppDelegate.swift">MySampleApp/MySampleApp/App/AppDelegate.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>17</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        return AWSMobileClient.sharedInstance.didFinishLaunching(application, withOptions: launchOptions)</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+34. Sign in with Provider</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+In order to sign in with a provider like Facebook or Google, make sure you have setup your Facebook App ID or Google Client ID according to the instructions in the help panel text in the feature configuration screen for User Sign-In for the Mobile Hub. You must download the sample after updating the IDs, so that your sample is generated with the correct settings. You must call this method in order to update the identity ID of the user so it is linked with the identity provider.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/App/SignIn/SignInViewController.swift">MySampleApp/MySampleApp/App/SignIn/SignInViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>218</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        AWSSignInManager.sharedInstance().login(signInProviderKey: signInProvider.identityProviderName, completionHandler: {(result: Any?, authState: AWSIdentityManagerAuthState, error: Error?) in</PRE></TD></TR><TR><TD><PRE>219</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            print("result = \(result), error = \(error)")</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+35. Identify your user</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+Utilize the AWSIdentityManager to identify your user. You have access to the username, image URL and identity ID which uniquely identifies the user.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift">MySampleApp/MySampleApp/Demo/UserIdentity/UserIdentityViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>22</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        let identityManager = AWSIdentityManager.default()</PRE></TD></TR><TR><TD><PRE>23</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        </PRE></TD></TR><TR><TD><PRE>24</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        if let identityUserName = identityManager.identityProfile?.userName {</PRE></TD></TR><TR><TD><PRE>25</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            userName.text = identityUserName</PRE></TD></TR><TR><TD><PRE>26</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        } else {</PRE></TD></TR><TR><TD><PRE>27</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            userName.text = NSLocalizedString("Guest User", comment: "Placeholder text for the guest user.")</PRE></TD></TR><TR><TD><PRE>28</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        }</PRE></TD></TR><TR><TD><PRE>29</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        </PRE></TD></TR><TR><TD><PRE>30</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        userID.text = identityManager.identityId</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+36. Integrate Amazon DynamoDB</b></p><br/>
+
+This section simply provides information about the generated code in the MySampleApp project.<br/><br/>
+
+Your generated Sample App contains a demonstration of using the DynamoDB Mapper to perform queries and scans against the NoSQL tables you configured in your Mobile Hub project. The following folder contains all the code for the NoSQL Demo.<p>The files named <YourTableName>.swift is a model class corresponding to your configured table. Copy these directly into your project. The DynamoDB object mapper uses these model classes to provide convenient marshaling between your Swift App and DynamoDB's JSON requests and responses.</p><p>The *Table.m files contain the example code to demonstrate insert, remove, query, and scan operations against your tables. You can copy segments of the example code in these files and adapt it for your mobile app's NoSQL Database needs.</p>
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/NoSQL">MySampleApp/MySampleApp/Demo/NoSQL</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+37. Manage User Files</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+Use the registered AWSUserFileManager service client to manage your files locally and to download or upload files from your S3 bucket. It is registered in the AWSMobileClient.swift file.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift">MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>41</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        manager = AWSUserFileManager.defaultUserFileManager()</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+38. Load Contents of a Directory</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+This method demonstrates how to use the AWSUserFileManager to load the contents of a directory. The directory here is the prefix variable which will match to your "public" folder or your "private" folder if you are signed in.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift">MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>228</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        let uploadsDirectory = "\(UserFilesUploadsDirectoryName)/"</PRE></TD></TR><TR><TD><PRE>229</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        if prefix == uploadsDirectory {</PRE></TD></TR><TR><TD><PRE>230</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            updateUserInterface()</PRE></TD></TR><TR><TD><PRE>231</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            return</PRE></TD></TR><TR><TD><PRE>232</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        }</PRE></TD></TR><TR><TD><PRE>233</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        manager.listAvailableContents(withPrefix: prefix, marker: marker) {[weak self] (contents: [AWSContent]?, nextMarker: String?, error: Error?) in</PRE></TD></TR><TR><TD><PRE>234</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            guard let strongSelf = self else { return }</PRE></TD></TR><TR><TD><PRE>235</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            if let error = error {</PRE></TD></TR><TR><TD><PRE>236</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.showSimpleAlertWithTitle("Error", message: "Failed to load the list of contents.", cancelButtonTitle: "OK")</PRE></TD></TR><TR><TD><PRE>237</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                print("Failed to load the list of contents. \(error)")</PRE></TD></TR><TR><TD><PRE>238</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            }</PRE></TD></TR><TR><TD><PRE>239</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            if let contents = contents, contents.count > 0 {</PRE></TD></TR><TR><TD><PRE>240</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.contents = contents</PRE></TD></TR><TR><TD><PRE>241</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                if let nextMarker = nextMarker, !nextMarker.isEmpty {</PRE></TD></TR><TR><TD><PRE>242</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                    strongSelf.didLoadAllContents = false</PRE></TD></TR><TR><TD><PRE>243</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                } else {</PRE></TD></TR><TR><TD><PRE>244</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                    strongSelf.didLoadAllContents = true</PRE></TD></TR><TR><TD><PRE>245</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                }</PRE></TD></TR><TR><TD><PRE>246</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.marker = nextMarker</PRE></TD></TR><TR><TD><PRE>247</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            } else {</PRE></TD></TR><TR><TD><PRE>248</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.checkUserProtectedFolder()</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+39. Download a File</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+This method demonstrates how to use the AWSUserFileManager to download a file referenced as an AWSContent object. It also demonstrates how to display the progress of a download.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift">MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>357</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    fileprivate func downloadContent(_ content: AWSContent, pinOnCompletion: Bool) {</PRE></TD></TR><TR><TD><PRE>358</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        content.download(with: .ifNewerExists, pinOnCompletion: pinOnCompletion, progressBlock: {[weak self] (content: AWSContent, progress: Progress) in</PRE></TD></TR><TR><TD><PRE>359</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            guard let strongSelf = self else { return }</PRE></TD></TR><TR><TD><PRE>360</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            if strongSelf.contents!.contains( where: {$0 == content} ) {</PRE></TD></TR><TR><TD><PRE>361</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.tableView.reloadData()</PRE></TD></TR><TR><TD><PRE>362</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            }</PRE></TD></TR><TR><TD><PRE>363</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        }) {[weak self] (content: AWSContent?, data: Data?, error: Error?) in</PRE></TD></TR><TR><TD><PRE>364</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            guard let strongSelf = self else { return }</PRE></TD></TR><TR><TD><PRE>365</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            if let error = error {</PRE></TD></TR><TR><TD><PRE>366</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                print("Failed to download a content from a server. \(error)")</PRE></TD></TR><TR><TD><PRE>367</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.showSimpleAlertWithTitle("Error", message: "Failed to download a content from a server.", cancelButtonTitle: "OK")</PRE></TD></TR><TR><TD><PRE>368</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            }</PRE></TD></TR><TR><TD><PRE>369</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            strongSelf.updateUserInterface()</PRE></TD></TR><TR><TD><PRE>370</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        }</PRE></TD></TR><TR><TD><PRE>371</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    }</PRE></TD></TR><TR><TD><PRE>372</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    </PRE></TD></TR><TR><TD><PRE>373</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    fileprivate func openContent(_ content: AWSContent) {</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+40. Delete a File from Local Storage</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+In order to remove a file from the local cache, call "removeLocal" on the AWSContent object that you want removed.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift">MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>338</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                content.removeLocal()</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+41. Delete a File from S3</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+In order to remove a file from S3, call "removeRemoteContentWithCompletionHandler" on the AWSContent object that you want removed.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift">MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>439</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        content.removeRemoteContent {[weak self] (content: AWSContent?, error: Error?) in</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+42. Upload a File</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+This method demonstrates how to upload a file by using AWSLocalContent. It also includes handler blocks for showing progress and handling errors.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift">MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>501</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    fileprivate func uploadLocalContent(_ localContent: AWSLocalContent) {</PRE></TD></TR><TR><TD><PRE>502</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        localContent.uploadWithPin(onCompletion: false, progressBlock: {[weak self] (content: AWSLocalContent, progress: Progress) in</PRE></TD></TR><TR><TD><PRE>503</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            guard let strongSelf = self else { return }</PRE></TD></TR><TR><TD><PRE>504</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            DispatchQueue.main.async {</PRE></TD></TR><TR><TD><PRE>505</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                // Update the upload UI if it is a new upload and the table is not yet updated</PRE></TD></TR><TR><TD><PRE>506</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                if(strongSelf.tableView.numberOfRows(inSection: 0) == 0 || strongSelf.tableView.numberOfRows(inSection: 0) &lt; strongSelf.manager.uploadingContents.count) {</PRE></TD></TR><TR><TD><PRE>507</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                    strongSelf.updateUploadUI()</PRE></TD></TR><TR><TD><PRE>508</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                } else {</PRE></TD></TR><TR><TD><PRE>509</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                    strongSelf.tableView.reloadData()</PRE></TD></TR><TR><TD><PRE>510</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                }</PRE></TD></TR><TR><TD><PRE>511</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            }</PRE></TD></TR><TR><TD><PRE>512</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            }, completionHandler: {[weak self] (content: AWSLocalContent?, error: Error?) in</PRE></TD></TR><TR><TD><PRE>513</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            guard let strongSelf = self else { return }</PRE></TD></TR><TR><TD><PRE>514</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            strongSelf.updateUploadUI()</PRE></TD></TR><TR><TD><PRE>515</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            if let error = error {</PRE></TD></TR><TR><TD><PRE>516</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                print("Failed to upload an object. \(error)")</PRE></TD></TR><TR><TD><PRE>517</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.showSimpleAlertWithTitle("Error", message: "Failed to upload an object.", cancelButtonTitle: "OK")</PRE></TD></TR><TR><TD><PRE>518</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            } else {</PRE></TD></TR><TR><TD><PRE>519</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                if localContent.key.hasPrefix(UserFilesUploadsDirectoryName) {</PRE></TD></TR><TR><TD><PRE>520</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                    strongSelf.showSimpleAlertWithTitle("File upload", message: "File upload completed successfully for \(localContent.key).", cancelButtonTitle: "Okay")</PRE></TD></TR><TR><TD><PRE>521</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                }</PRE></TD></TR><TR><TD><PRE>522</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                strongSelf.refreshContents()</PRE></TD></TR><TR><TD><PRE>523</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            }</PRE></TD></TR><TR><TD><PRE>524</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        })</PRE></TD></TR><TR><TD><PRE>525</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        updateUploadUI()</PRE></TD></TR><TR><TD><PRE>526</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    }</PRE></TD></TR><TR><TD><PRE>527</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    </PRE></TD></TR><TR><TD><PRE>528</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    fileprivate func uploadWithData(_ data: Data, forKey key: String) {</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+43. Create a Folder</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+To create a folder use the "createFolderForKey" method that creates AWSLocalContent appropriately and re-uses the "uploadLocalContent" method shown in the previous step.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift">MySampleApp/MySampleApp/Demo/UserFiles/UserFilesViewController.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>534</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>    fileprivate func uploadWithData(_ data: Data, forKey key: String) {</PRE></TD></TR><TR><TD><PRE>535</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>        let localContent = manager.localContent(with: data, key: key)</PRE></TD></TR><TR><TD><PRE>536</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>        uploadLocalContent(localContent)</PRE></TD></TR><TR><TD><PRE>537</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>    }</PRE></TD></TR><TR><TD><PRE>538</PRE></TD><TD style="width:900px;background-color:#FFFFFF;color:#000000;"><PRE>    </PRE></TD></TR><TR><TD><PRE>539</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    fileprivate func createFolderForKey(_ key: String) {</PRE></TD></TR><TR><TD><PRE>540</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        let localContent = manager.localContent(with: nil, key: key)</PRE></TD></TR><TR><TD><PRE>541</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        uploadLocalContent(localContent)</PRE></TD></TR><TR><TD><PRE>542</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>    }</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+44. Initialize Cognito Sync Client</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+AWSCognito is a singleton class for Cognito Sync's service client.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserSettings/ColorThemeSettings.swift">MySampleApp/MySampleApp/Demo/UserSettings/ColorThemeSettings.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>41</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        let syncClient: AWSCognito = AWSCognito.default()</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+45. Retrieve a Dataset</b></p><br/>
+
+Please copy this segment of code from the MySampleApp project into your own project.<br/><br/>
+
+A Dataset is referenced by a string and returns a key-value map. In this demonstration we are creating a dataset called "user_settings" which holds a map with values for title text, bar and background colors.
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../MySampleApp/MySampleApp/Demo/UserSettings/ColorThemeSettings.swift">MySampleApp/MySampleApp/Demo/UserSettings/ColorThemeSettings.swift</A></SPAN><BR/><BR/><SPAN style="font-family: courier"><TABLE style="border:0; "><TR><TD><PRE>43</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        let userSettings: AWSCognitoDataset = syncClient.openOrCreateDataset("user_settings")</PRE></TD></TR><TR><TD><PRE>44</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        </PRE></TD></TR><TR><TD><PRE>45</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>        userSettings.synchronize().continueWith { (task: AWSTask&lt;AnyObject>) -> Any? in</PRE></TD></TR><TR><TD><PRE>46</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            if let error = task.error as? NSError {</PRE></TD></TR><TR><TD><PRE>47</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                print("loadSettings error: \(error)")</PRE></TD></TR><TR><TD><PRE>48</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                completionBlock(nil, error)</PRE></TD></TR><TR><TD><PRE>49</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>                return nil</PRE></TD></TR><TR><TD><PRE>50</PRE></TD><TD style="width:900px;background-color:#DDDDDD;color:#0000FF;"><PRE>            }</PRE></TD></TR></TABLE></SPAN>
+<br/>
+
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Use as an Example -->
+
+
+<!-- begin - sub-heading = Develop -->
+
+      <li>
+Software License
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+46. Software License</b></p><br/>
+
+This section simply provides information about the generated code in the MySampleApp project.<br/><br/>
+
+Please refer to the following file for details about the license associated with the sample download project and the included software development kits (SDKs).
+<br/>
+<SPAN style="font-family: courier"><A TARGET="_BLANK" HREF="file:../LICENSE.txt">LICENSE.txt</A></SPAN>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Software License -->
+
+    </ul>
+  </li>
+
+<!-- end - heading = Develop -->
+
+
+<!-- begin - heading = Troubleshoot -->
+
+  <li>
+Troubleshoot
+    <ul>
+
+<!-- begin - sub-heading = Troubleshoot -->
+
+      <li>
+Development Environment Issues
+
+<!-- begin - steps list -->
+
+        <ul>
+
+<!-- begin - step -->
+
+          <li class="lastLevel">
+<br/><p><b>
+47. Xcode Version</b></p><br/>
+
+Many issues can be resolved by simply upgrading to the latest version of the Xcode IDE (integrated development environment). You should be using Xcode version 7.1 or newer. You can check your Xcode version by going to the menu:<br/><br/><p><b>Xcode -&gt; About Xcode</b></p>
+<br/>
+          </li>
+
+<!-- end - step -->
+
+        </ul>
+
+<!-- end - steps list -->
+
+
+<br/>
+      </li>
+
+<!-- end - sub-heading = Development Environment Issues -->
+
+    </ul>
+  </li>
+
+<!-- end - heading = Troubleshoot -->
+
+            </ul>
+        </div>
+    </body>
+</html>

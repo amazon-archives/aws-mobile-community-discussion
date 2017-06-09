@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AWSPushManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AWS iOS Mobile Hub Helper Library v1.0.0 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Amazon Web Services, Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/delegate">delegate</option>
+		
+		<option value="//api/name/deviceToken">deviceToken</option>
+		
+		<option value="//api/name/enabled">enabled</option>
+		
+		<option value="//api/name/endpointARN">endpointARN</option>
+		
+		<option value="//api/name/platformARN">platformARN</option>
+		
+		<option value="//api/name/topicARNs">topicARNs</option>
+		
+		<option value="//api/name/topics">topics</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/PushManagerForKey:">+ PushManagerForKey:</option>
+		
+		<option value="//api/name/defaultPushManager">+ defaultPushManager</option>
+		
+		<option value="//api/name/registerPushManagerWithConfiguration:forKey:">+ registerPushManagerWithConfiguration:forKey:</option>
+		
+		<option value="//api/name/removePushManagerForKey:">+ removePushManagerForKey:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/disablePushNotifications">- disablePushNotifications</option>
+		
+		<option value="//api/name/interceptApplication:didFailToRegisterForRemoteNotificationsWithError:">- interceptApplication:didFailToRegisterForRemoteNotificationsWithError:</option>
+		
+		<option value="//api/name/interceptApplication:didFinishLaunchingWithOptions:">- interceptApplication:didFinishLaunchingWithOptions:</option>
+		
+		<option value="//api/name/interceptApplication:didReceiveRemoteNotification:">- interceptApplication:didReceiveRemoteNotification:</option>
+		
+		<option value="//api/name/interceptApplication:didRegisterForRemoteNotificationsWithDeviceToken:">- interceptApplication:didRegisterForRemoteNotificationsWithDeviceToken:</option>
+		
+		<option value="//api/name/registerForPushNotifications">- registerForPushNotifications</option>
+		
+		<option value="//api/name/registerTopicARNs:">- registerTopicARNs:</option>
+		
+		<option value="//api/name/topicForTopicARN:">- topicForTopicARN:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AWSPushManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AWSPushManager.h<br />AWSPushManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The Push Manager registers the app on the device with Apple Push Notification Service (APNS) and registers the resulting device token in Amazon SNS. The result of this registration process is an Amazon SNS Endpoint ARN, which can be used to send push notifications directly to a specific device. The Push Manager also manages Amazon SNS topic subscriptions, allowing the app to subscribe to Amazon SNS topics, which let you target groups of devices with push notifications. Requires the AWSSNS framework of AWSiOSSDK.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/enabled" title="enabled"></a>
+	<h3 class="method-title"><code><a href="#//api/name/enabled">&nbsp;&nbsp;enabled</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Indicates if <code>PushManager</code> is enabled or disabled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isEnabled) BOOL enabled</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/deviceToken" title="deviceToken"></a>
+	<h3 class="method-title"><code><a href="#//api/name/deviceToken">&nbsp;&nbsp;deviceToken</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The device token returned by iOS.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSString *deviceToken</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/endpointARN" title="endpointARN"></a>
+	<h3 class="method-title"><code><a href="#//api/name/endpointARN">&nbsp;&nbsp;endpointARN</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The application platform endpoint ARN for Amazon SNS.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSString *endpointARN</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/platformARN" title="platformARN"></a>
+	<h3 class="method-title"><code><a href="#//api/name/platformARN">&nbsp;&nbsp;platformARN</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The application platform ARN for the app.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSString *platformARN</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/topicARNs" title="topicARNs"></a>
+	<h3 class="method-title"><code><a href="#//api/name/topicARNs">&nbsp;&nbsp;topicARNs</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>A list of topic ARNs selected during project configuraiton on AWS Mobile Hub from the <code>Info.plist</code> file.
+If a custom helper client is used, it would contain the topic ARNs specified in AWSPushManagerConfiguration object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, nullable) NSArray&lt;NSString*&gt; *topicARNs</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/topics" title="topics"></a>
+	<h3 class="method-title"><code><a href="#//api/name/topics">&nbsp;&nbsp;topics</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The list of <code>PushTopic</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray&lt;AWSPushTopic*&gt; *topics</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The delegate for receiving <code>PushManager</code> and <code>PushTopic</code> events.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;AWSPushManagerDelegate,AWSPushTopicDelegate&gt; delegate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultPushManager" title="defaultPushManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultPushManager">+&nbsp;defaultPushManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the default Push Manager singleton instance configured using the information provided in <code>Info.plist</code> file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)defaultPushManager</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>let pushManager = AWSPushManager.default()
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSPushManager *pushManager = [AWSPushManager defaultPushManager];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerPushManagerWithConfiguration:forKey:" title="registerPushManagerWithConfiguration:forKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerPushManagerWithConfiguration:forKey:">+&nbsp;registerPushManagerWithConfiguration:forKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a helper client for <code>AWSPushManager</code> for specified configuration with mentioned key.
+Use this method only if you require a helper client with specific configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerPushManagerWithConfiguration:(AWSPushManagerConfiguration *)<em>pushManagerConfiguration</em> forKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pushManagerConfiguration</code></th>
+						<td><p>AWSPushManagerConfiguration object for the manager.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>For example, set the configuration in <code>- application:didFinishLaunchingWithOptions:</code></p>
+
+<p><em>Swift</em></p>
+
+<pre><code> func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
+     let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+     let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
+     AWSServiceManager.default().defaultServiceConfiguration = configuration
+
+     let pushManagerConfiguration = AWSPushManagerConfiguration(snsPlatformARN: "SNS_PLATFORM_ARN")
+
+     AWSPushManager.register(with: pushManagerConfiguration, forKey: "defaultPushManager")
+
+     return true
+ }
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code> - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+     AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+                                                                                                     identityPoolId:@"YourIdentityPoolId"];
+     AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
+                                                                          credentialsProvider:credentialsProvider];
+     AWSServiceManager.defaultServiceManager.defaultServiceConfiguration = configuration;
+     AWSPushManagerConfiguration *pushManagerConfiguration = [[AWSPushManager alloc] initWithSNSPlatformARN:@"SNS_PLATFORM_ARN"];
+     [AWSPushManager registerPushManagerWithConfiguration:pushManagerConfiguration
+                                                   forKey:@"defaultPushManager"];
+
+     return YES;
+ }
+</code></pre>
+
+<p>Then call the following to get the helper client:</p>
+
+<p><em>Swift</em></p>
+
+<pre><code>let pushmanager = AWSPushManager(forKey: "defaultPushManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSPushManager *pushmanager = [AWSPushManager pushManagerForKey:@"defaultPushManager"];
+</code></pre><div class="warning"><p><strong>Warning:</strong> After calling this method, do not modify the configuration object. It may cause unspecified behaviors.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/PushManagerForKey:" title="PushManagerForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/PushManagerForKey:">+&nbsp;PushManagerForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Retrieves the helper client associated with the key. You need to call <code>+ registerPushManagerWithConfiguration:forKey:</code> before invoking this method. If <code>+ registerPushManagerWithConfiguration:forKey:</code> has not been called in advance or the key does not exist, this method returns <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)PushManagerForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An instance of AWSPushManager for specified key.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code> let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+ let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
+ AWSServiceManager.default().defaultServiceConfiguration = configuration
+
+ let pushManagerConfiguration = AWSPushManagerConfiguration(snsPlatformARN: "SNS_PLATFORM_ARN")
+
+ AWSPushManager.register(with: pushManagerConfiguration, forKey: "defaultPushManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code> AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+                                                                                                 identityPoolId:@"YourIdentityPoolId"];
+ AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
+                                                                      credentialsProvider:credentialsProvider];
+ AWSServiceManager.defaultServiceManager.defaultServiceConfiguration = configuration;
+ AWSPushManagerConfiguration *pushManagerConfiguration = [[AWSPushManager alloc] initWithSNSPlatformARN:@"SNS_PLATFORM_ARN"];
+ [AWSPushManager registerPushManagerWithConfiguration:pushManagerConfiguration
+                                               forKey:@"defaultPushManager"];
+</code></pre>
+
+<p>Then call the following to get the helper client:</p>
+
+<p><em>Swift</em></p>
+
+<pre><code>let Pushmanager = AWSPushManager(forKey: "defaultPushManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSPushManager *Pushmanager = [AWSPushManager PushManagerForKey:@"defaultPushManager"];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removePushManagerForKey:" title="removePushManagerForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removePushManagerForKey:">+&nbsp;removePushManagerForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes the helper client associated with the key and release it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)removePushManagerForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>AWSPushManager.remove(forKey: "USWest2PushManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>[AWSPushManager removePushManagerForKey:@"USWest2PushManager"];
+</code></pre><div class="warning"><p><strong>Warning:</strong> Before calling this method, make sure no method is running on this client.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerTopicARNs:" title="registerTopicARNs:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerTopicARNs:">&ndash;&nbsp;registerTopicARNs:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initializes <code>PushManager</code> with the list of topic ARNs.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerTopicARNs:(NSArray&lt;NSString*&gt; *)<em>topicARNs</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>topicARNs</code></th>
+						<td><p>A list of topic ARNs from Amazon SNS. It needs to be an <code>NSArray</code> containing only <code>NSString</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/topicForTopicARN:" title="topicForTopicARN:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/topicForTopicARN:">&ndash;&nbsp;topicForTopicARN:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a topic associated with the specified topic ARN.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (AWSPushTopic *)topicForTopicARN:(NSString *)<em>topicARN</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>topicARN</code></th>
+						<td><p>A topic ARN from Amazon SNS.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The topic with the specified topic ARN.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerForPushNotifications" title="registerForPushNotifications"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerForPushNotifications">&ndash;&nbsp;registerForPushNotifications</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Initiates the process to enable Push Notifications.
+When called for the first time, it asks the user for the permission to enable Push Notifications. If the user decline it, it fails to enable Push Notifications.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)registerForPushNotifications</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>On success, it calls <code>- pushManagerDidRegister:</code> from <code>AWSPushManagerDelegate</code>.
+On failure, it calls <code>- pushManager:didFailToRegisterWithError:</code> from <code>AWSPushManagerDelegate</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/disablePushNotifications" title="disablePushNotifications"></a>
+	<h3 class="method-title"><code><a href="#//api/name/disablePushNotifications">&ndash;&nbsp;disablePushNotifications</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unsubscribes from all subscribed topics, then marks <code>PushManager</code> as disabled.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)disablePushNotifications</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>On success, it calls <code>- pushManagerDidDisable:</code> from <code>AWSPushManagerDelegate</code>.
+On failure, it calls <code>- pushManager:didFailToDisableWithError:</code> from <code>AWSPushManagerDelegate</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interceptApplication:didFinishLaunchingWithOptions:" title="interceptApplication:didFinishLaunchingWithOptions:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interceptApplication:didFinishLaunchingWithOptions:">&ndash;&nbsp;interceptApplication:didFinishLaunchingWithOptions:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Intercepts the <code>- application:didFinishLaunchingWithOptions:</code> application delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (BOOL)interceptApplication:(UIApplication *)<em>application</em> didFinishLaunchingWithOptions:(nullable NSDictionary *)<em>launchOptions</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>application</code></th>
+						<td><p>Your singleton app object.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>launchOptions</code></th>
+						<td><p>A dictionary indicating the reason the app was launched (if any). The contents of this dictionary may be empty in situations where the user launched the app directly. For information about the possible keys in this dictionary and how to handle them, see Launch Options Keys.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interceptApplication:didRegisterForRemoteNotificationsWithDeviceToken:" title="interceptApplication:didRegisterForRemoteNotificationsWithDeviceToken:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interceptApplication:didRegisterForRemoteNotificationsWithDeviceToken:">&ndash;&nbsp;interceptApplication:didRegisterForRemoteNotificationsWithDeviceToken:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Intercepts the <code>- application:didRegisterForRemoteNotificationsWithDeviceToken:</code> application delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interceptApplication:(UIApplication *)<em>application</em> didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)<em>deviceToken</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>application</code></th>
+						<td><p>The app object that initiated the remote-notification registration process.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>deviceToken</code></th>
+						<td><p>A token that identifies the device to APNs.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interceptApplication:didFailToRegisterForRemoteNotificationsWithError:" title="interceptApplication:didFailToRegisterForRemoteNotificationsWithError:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interceptApplication:didFailToRegisterForRemoteNotificationsWithError:">&ndash;&nbsp;interceptApplication:didFailToRegisterForRemoteNotificationsWithError:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Intercepts the <code>- application:didFailToRegisterForRemoteNotificationsWithError:</code> application delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interceptApplication:(UIApplication *)<em>application</em> didFailToRegisterForRemoteNotificationsWithError:(nullable NSError *)<em>error</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>application</code></th>
+						<td><p>The app object that initiated the remote-notification registration process.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>error</code></th>
+						<td><p>An <code>NSError</code> object that encapsulates information why registration did not succeed.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/interceptApplication:didReceiveRemoteNotification:" title="interceptApplication:didReceiveRemoteNotification:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/interceptApplication:didReceiveRemoteNotification:">&ndash;&nbsp;interceptApplication:didReceiveRemoteNotification:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Intercepts the <code>- application:didReceiveRemoteNotification:</code> application delegate.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)interceptApplication:(UIApplication *)<em>application</em> didReceiveRemoteNotification:(nullable NSDictionary *)<em>userInfo</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>application</code></th>
+						<td><p>The app object that received the remote notification.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userInfo</code></th>
+						<td><p>A dictionary that contains information related to the remote notification, potentially including a badge number for the app icon, an alert sound, an alert message to display to the user, a notification identifier, and custom data. The provider originates it as a JSON-defined dictionary that iOS converts to an <code>NSDictionary</code> object; the dictionary may contain only property-list objects plus <code>NSNull</code>.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSPushManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Amazon Web Services, Inc. All rights reserved. Updated: 2017-05-09</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

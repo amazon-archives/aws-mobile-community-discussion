@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AWSContent Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AWS iOS Mobile Hub Helper Library v1.0.0 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Amazon Web Services, Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/cached">cached</option>
+		
+		<option value="//api/name/cachedData">cachedData</option>
+		
+		<option value="//api/name/directory">directory</option>
+		
+		<option value="//api/name/downloadedDate">downloadedDate</option>
+		
+		<option value="//api/name/fileSize">fileSize</option>
+		
+		<option value="//api/name/key">key</option>
+		
+		<option value="//api/name/knownRemoteByteCount">knownRemoteByteCount</option>
+		
+		<option value="//api/name/knownRemoteLastModifiedDate">knownRemoteLastModifiedDate</option>
+		
+		<option value="//api/name/pinned">pinned</option>
+		
+		<option value="//api/name/progress">progress</option>
+		
+		<option value="//api/name/status">status</option>
+		
+	</optgroup>
+	
+
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/downloadWithDownloadType:pinOnCompletion:progressBlock:completionHandler:">- downloadWithDownloadType:pinOnCompletion:progressBlock:completionHandler:</option>
+		
+		<option value="//api/name/getRemoteFileURLWithCompletionHandler:">- getRemoteFileURLWithCompletionHandler:</option>
+		
+		<option value="//api/name/pin">- pin</option>
+		
+		<option value="//api/name/removeLocal">- removeLocal</option>
+		
+		<option value="//api/name/removeRemoteContentWithCompletionHandler:">- removeRemoteContentWithCompletionHandler:</option>
+		
+		<option value="//api/name/unPin">- unPin</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AWSContent Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AWSContentManager.h<br />AWSContentManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The content object that holds the cached data and its metadata.</p>
+
+<p>A category to add remote file removal to <code>AWSContent</code>.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/key" title="key"></a>
+	<h3 class="method-title"><code><a href="#//api/name/key">&nbsp;&nbsp;key</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The Amazon S3 key associated with the content.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSString *key</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/directory" title="directory"></a>
+	<h3 class="method-title"><code><a href="#//api/name/directory">&nbsp;&nbsp;directory</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Shows if the content is a directory.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isDirectory) BOOL directory</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/status" title="status"></a>
+	<h3 class="method-title"><code><a href="#//api/name/status">&nbsp;&nbsp;status</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The status of the content.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) AWSContentStatusType status</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/progress" title="progress"></a>
+	<h3 class="method-title"><code><a href="#//api/name/progress">&nbsp;&nbsp;progress</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The transfer progress.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSProgress *progress</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/knownRemoteByteCount" title="knownRemoteByteCount"></a>
+	<h3 class="method-title"><code><a href="#//api/name/knownRemoteByteCount">&nbsp;&nbsp;knownRemoteByteCount</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The last known size reported by the Amazon S3. May be different from the actual size if the file was modified on the server.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger knownRemoteByteCount</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/knownRemoteLastModifiedDate" title="knownRemoteLastModifiedDate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/knownRemoteLastModifiedDate">&nbsp;&nbsp;knownRemoteLastModifiedDate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The last known last modified date reported by the Amazon S3. May be different from the actual last modified date if the file was modified on the server.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDate *knownRemoteLastModifiedDate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cachedData" title="cachedData"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cachedData">&nbsp;&nbsp;cachedData</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The cached data object.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSData *cachedData</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/fileSize" title="fileSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/fileSize">&nbsp;&nbsp;fileSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The cached data size.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger fileSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadedDate" title="downloadedDate"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadedDate">&nbsp;&nbsp;downloadedDate</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The date the cached data was downloaded.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSDate *downloadedDate</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cached" title="cached"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cached">&nbsp;&nbsp;cached</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Wheather the content is locally cached.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isCached) BOOL cached</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pinned" title="pinned"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pinned">&nbsp;&nbsp;pinned</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Weather the content is pinned. Pinned objects are not subject to the content cache limit.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly, getter=isPinned) BOOL pinned</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/downloadWithDownloadType:pinOnCompletion:progressBlock:completionHandler:" title="downloadWithDownloadType:pinOnCompletion:progressBlock:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/downloadWithDownloadType:pinOnCompletion:progressBlock:completionHandler:">&ndash;&nbsp;downloadWithDownloadType:pinOnCompletion:progressBlock:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Downloads a file from the remote server.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)downloadWithDownloadType:(AWSContentDownloadType)<em>loadingType</em> pinOnCompletion:(BOOL)<em>pinOnCompletion</em> progressBlock:(void ( ^ _Nullable ) ( AWSContent *content , NSProgress *progress ))<em>progressBlock</em> completionHandler:(void ( ^ ) ( AWSContent *_Nullable content , NSData *_Nullable data , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>loadingType</code></th>
+						<td><p>Specifies the loading behavior for downloading data.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>pinOnCompletion</code></th>
+						<td><p>When set to <code>YES</code>, it pins the content on completion. You can download a content that does not fit in the content cache by setting it to <code>YES</code>.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>progressBlock</code></th>
+						<td><p>The progress feedback block.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler block.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>func downloadContent(content: AWSContent, pinOnCompletion: Bool) {
+     content.download(with: .ifNewerExists, pinOnCompletion: pinOnCompletion, progressBlock: { (content: AWSContent, content: Progress) in
+             // Handle progress feedback
+         }, completionHandler: { (content: AWSContent?, data: Data?, error: Error?) in
+             if let error = error {
+                 print("Failed to download a content from a server.)")
+                 // Handle error here
+                 return
+             }
+             // Handle successful download here
+         })
+}
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>- (void)downloadContent:(AWSContent *)content
+        pinOnCompletion:(BOOL)pinOnCompletion {
+    [content downloadWithDownloadType:AWSContentDownloadTypeIfNewerExists
+                      pinOnCompletion:pinOnCompletion
+                        progressBlock:^(AWSContent *content, NSProgress *progress) {
+                        // Handle progress feedback
+                    }
+                completionHandler:^(AWSContent *content, NSData *data, NSError *error) {
+                    if (error) {
+                        NSLog(@"Failed to download a content from a server. %@", error);
+                        // Handle error here
+                        return;
+                    }
+                    // Handle successful download here
+                }];
+    }
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getRemoteFileURLWithCompletionHandler:" title="getRemoteFileURLWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getRemoteFileURLWithCompletionHandler:">&ndash;&nbsp;getRemoteFileURLWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Gets Presigned URL or the Cloud Front URL for the file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)getRemoteFileURLWithCompletionHandler:(void ( ^ ) ( NSURL *_Nullable url , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler block.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>func getContentURL(content: AWSContent) {
+    content.getRemoteFileURLWithCompletionHandler({ (url: URL?, error: Error?) -&gt; Void in
+        guard let url = url else {
+            NSLog("Error getting URL for file. \(error)")
+            return
+        }
+        // Handle successfully generated URL here
+    })
+}
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>- (void)getContentURL:(AWSContent *)content {
+    [content getRemoteFileURLWithCompletionHandler:^(NSURL *url, NSError *error) {
+        if (error) {
+            NSLog(@"Failed to get a valid URL from a server. %@", error);
+        }
+        // handle successfully generated URL here
+    }];
+}
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pin" title="pin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pin">&ndash;&nbsp;pin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Pins the locally cached object. Pinned objects are not subject to the content cache limit.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)pin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/unPin" title="unPin"></a>
+	<h3 class="method-title"><code><a href="#//api/name/unPin">&ndash;&nbsp;unPin</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Unpins the pinned object. It may purge the content cache if the content cache does not have enough available space to fit the unpinned data.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)unPin</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeLocal" title="removeLocal"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeLocal">&ndash;&nbsp;removeLocal</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes locally cached data regardless of the pinning status.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeLocal</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+
+						
+						<h2 class="task-title">Other Methods</h2>
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/removeRemoteContentWithCompletionHandler:" title="removeRemoteContentWithCompletionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeRemoteContentWithCompletionHandler:">&ndash;&nbsp;removeRemoteContentWithCompletionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes the remote file associated with <code>AWSContent</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)removeRemoteContentWithCompletionHandler:(void ( ^ ) ( AWSContent *content , NSError *error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler block.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>func removeContent(content: AWSContent) {
+    content.removeRemoteContent(completionHandler: {(content: AWSContent?, error: NSError?) -&gt; Void in
+        if let error = error {
+            print("Failed to delete an object from the remote server. \(error)")
+        } else {
+            print("Success")
+            // Do something further
+        }
+    })
+}
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>- (void)removeContent:(AWSContent *)content {
+    [content removeRemoteContentWithCompletionHandler:^(AWSContent *content, NSError *error) {
+        if (error) {
+            NSLog(@"Failed to delete an object from the remote server. %@", error);
+        } else {
+            NSLog(@"Success");
+            // Do something further
+        }
+    }];
+}
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSUserFileManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Amazon Web Services, Inc. All rights reserved. Updated: 2017-05-09</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

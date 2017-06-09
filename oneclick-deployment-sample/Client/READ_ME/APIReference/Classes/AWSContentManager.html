@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AWSContentManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AWS iOS Mobile Hub Helper Library v1.0.0 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Amazon Web Services, Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/cachedUsedSize">cachedUsedSize</option>
+		
+		<option value="//api/name/maxCacheSize">maxCacheSize</option>
+		
+		<option value="//api/name/pinnedSize">pinnedSize</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/ContentManagerForKey:">+ ContentManagerForKey:</option>
+		
+		<option value="//api/name/defaultContentManager">+ defaultContentManager</option>
+		
+		<option value="//api/name/registerContentManagerWithConfiguration:forKey:">+ registerContentManagerWithConfiguration:forKey:</option>
+		
+		<option value="//api/name/removeContentManagerForKey:">+ removeContentManagerForKey:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/clearCache">- clearCache</option>
+		
+		<option value="//api/name/contentWithKey:">- contentWithKey:</option>
+		
+		<option value="//api/name/listAvailableContentsWithPrefix:marker:completionHandler:">- listAvailableContentsWithPrefix:marker:completionHandler:</option>
+		
+		<option value="//api/name/listRecentContentsWithPrefix:completionHandler:">- listRecentContentsWithPrefix:completionHandler:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AWSContentManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td>NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AWSContentManager.h<br />AWSContentManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>The Content Manager manages caching and transfer of files from Amazon S3 and/or
+Amazon CloudFront. It lists files directly using S3, regardless of whether
+Amazon CloudFront is in use. It maintains a size-limited cache for files stored
+on the local device and provides operations to set the cache size limit and
+clear files from the local cache. It serves as the application&rsquo;s interface into
+the Content Delivery feature. Content Manager instances are also used internally
+for the User Files feature.
+Requires the AWSS3 framework of AWSiOSSDK.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/maxCacheSize" title="maxCacheSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/maxCacheSize">&nbsp;&nbsp;maxCacheSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Local cache size limit in bytes.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) NSUInteger maxCacheSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/cachedUsedSize" title="cachedUsedSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/cachedUsedSize">&nbsp;&nbsp;cachedUsedSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Local cache bytes used.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger cachedUsedSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/pinnedSize" title="pinnedSize"></a>
+	<h3 class="method-title"><code><a href="#//api/name/pinnedSize">&nbsp;&nbsp;pinnedSize</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Number of bytes pinned in the cache. Pinned items do not count towards the
+cache size limit.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSUInteger pinnedSize</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultContentManager" title="defaultContentManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultContentManager">+&nbsp;defaultContentManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the default Content Manager singleton instance configured using the information provided in <code>Info.plist</code> file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)defaultContentManager</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>let contentManager = AWSContentManager.default()
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSContentManager *contentManager =  [AWSContentManager defaultContentManager];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerContentManagerWithConfiguration:forKey:" title="registerContentManagerWithConfiguration:forKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerContentManagerWithConfiguration:forKey:">+&nbsp;registerContentManagerWithConfiguration:forKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a helper client for AWSContentManager for specified configuration with mentioned key.
+Use this method only if you require a helper client with specific configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerContentManagerWithConfiguration:(AWSContentManagerConfiguration *)<em>contentManagerConfiguration</em> forKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>contentManagerConfiguration</code></th>
+						<td><p>AWSContentManagerConfiguration object for the manager.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>For example, set the configuration in <code>- application:didFinishLaunchingWithOptions:</code></p>
+
+<p><em>Swift</em></p>
+
+<pre><code> func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
+     let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+     let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
+     AWSServiceManager.default().defaultServiceConfiguration = configuration
+
+     let contentManagerConfiguration = AWSContentManagerConfiguration(bucketName: "myBucket")
+
+     AWSContentManager.register(with: contentManagerConfiguration, forKey: "defaultManager")
+ }
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code> - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+     AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+                                                                                                     identityPoolId:@"YourIdentityPoolId"];
+     AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
+                                                                          credentialsProvider:credentialsProvider];
+     AWSServiceManager.defaultServiceManager.defaultServiceConfiguration = configuration;                                                                          
+     AWSContentManagerConfiguration *contentManagerConfiguration = [[AWSContentManager alloc] initWithBucketName:@"myBucketName"];
+     [AWSContentManager registerUserFileManagerWithConfiguration:contentManagerConfiguration
+                                                          forKey:@"defaultManager"];     
+     return YES;
+ }
+</code></pre>
+
+<p>Then call the following to get the helper client:</p>
+
+<p><em>Swift</em></p>
+
+<pre><code>let contentManager = AWSContentManager(forKey: "defaultManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSContentManager *contentManager = [AWSContentManager contentManagerForKey:@"defaultManager"];
+</code></pre><div class="warning"><p><strong>Warning:</strong> After calling this method, do not modify the configuration object. It may cause unspecified behaviors.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/ContentManagerForKey:" title="ContentManagerForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/ContentManagerForKey:">+&nbsp;ContentManagerForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Retrieves the helper client associated with the key. You need to call <code>+ registerContentManagerWithConfiguration:forKey:</code> before invoking this method. If <code>+ registerContentManagerWithConfiguration:forKey:</code> has not been called in advance or the key does not exist, this method returns <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)ContentManagerForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An instance of AWSUserFileManager for specified key.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code> let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+ let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
+ AWSServiceManager.default().defaultServiceConfiguration = configuration
+
+ let contentManagerConfiguration = AWSContentManagerConfiguration(bucketName: "myBucket")
+
+ AWSContentManager.register(with: contentManagerConfiguration, forKey: "defaultManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code> AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+                                                                                                 identityPoolId:@"YourIdentityPoolId"];
+ AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
+                                                                      credentialsProvider:credentialsProvider];
+ AWSServiceManager.defaultServiceManager.defaultServiceConfiguration = configuration;                                                                          
+ AWSContentManagerConfiguration *contentManagerConfiguration = [[AWSContentManager alloc] initWithBucketName:@"myBucketName"];
+ [AWSContentManager registerUserFileManagerWithConfiguration:userFileManagerConfiguration
+                                                      forKey:@"defaultManager"];     
+</code></pre>
+
+<p>Then call the following to get the helper client:</p>
+
+<p><em>Swift</em></p>
+
+<pre><code>let ContentManager = AWSContentManager(forKey: "defaultManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSContentManager *ContentManager = [AWSContentManager ContentManagerForKey:@"defaultManager"];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeContentManagerForKey:" title="removeContentManagerForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeContentManagerForKey:">+&nbsp;removeContentManagerForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes the helper client associated with the key and release it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)removeContentManagerForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>AWSContentManager.remove(forKey: "defaultManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>[AWSContentManager removeContentManagerForKey:@"defaultManager"];
+</code></pre><div class="warning"><p><strong>Warning:</strong> Before calling this method, make sure no method is running on this client.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/listAvailableContentsWithPrefix:marker:completionHandler:" title="listAvailableContentsWithPrefix:marker:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/listAvailableContentsWithPrefix:marker:completionHandler:">&ndash;&nbsp;listAvailableContentsWithPrefix:marker:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Loads the list of available files in the Amazon S3 bucket under the folder specified by the prefix parameter. Results are paged with page size of 100 files. The marker parameter value returned from a call should be passed to a subsequent call, in order to page through the list of files.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)listAvailableContentsWithPrefix:(nullable NSString *)<em>prefix</em> marker:(nullable NSString *)<em>marker</em> completionHandler:(void ( ^ ) ( NSArray&lt;AWSContent*&gt; *_Nullable contents , NSString *_Nullable marker , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>prefix</code></th>
+						<td><p>Limits the response to keys that begin with the specified prefix.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>marker</code></th>
+						<td><p>The key to start with when listing objects in a bucket. It loads object metadata from the S3 bucket in alphabetical order, starting with the key after the marker in order.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler that returns the results and error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>let contentManager = AWSContentManager(forKey: "defaultManager")
+manager.listAvailableContents(withPrefix: "prefix", marker: marker, completionHandler: {(contents: [AWSContent]?, nextMarker: String?, error: Error?) -&gt; Void in
+    if let error = error {
+        print("Failed to load the list of contents. \(error)")
+        // handle content load failure here
+    }
+    if let contents = contents, contents.count &gt; 0 {
+        // Use marker and contents here
+    }
+    // handle successful result here
+})
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSContentManager *contentManager = [AWSContentManager contentManagerForKey:@"defaultManager"];
+[contentManager
+    listAvailableContentsWithPrefix:@"prefix"
+                             marker:marker
+                  completionHandler:^(NSArray *contents, NSString *nextMarker, NSError *error) {
+                    if (error) {
+                        NSLog(@"Failed to load the list of contents. %@", error);
+                        // handle content load failure here
+                    }
+                    if (contents.count &gt; 0) {
+                        // Use marker and contents here
+                    }
+                    // handle successful result here
+                }];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/listRecentContentsWithPrefix:completionHandler:" title="listRecentContentsWithPrefix:completionHandler:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/listRecentContentsWithPrefix:completionHandler:">&ndash;&nbsp;listRecentContentsWithPrefix:completionHandler:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns a list of contents that fit in the available cache. The list is sorted by last modified date on the S3 bucket, the most recently modified one first.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)listRecentContentsWithPrefix:(nullable NSString *)<em>prefix</em> completionHandler:(void ( ^ ) ( NSArray&lt;AWSContent*&gt; *_Nullable result , NSError *_Nullable error ))<em>completionHandler</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>prefix</code></th>
+						<td><p>Limits the response to keys that begin with the specified prefix.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>completionHandler</code></th>
+						<td><p>The completion handler that returns the result and error.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>let contentManager = AWSContentManager(forKey: "defaultManager")
+contentManager.listRecentContents(withPrefix: "prefix", completionHandler: {(result: [AWSContent]?, error: Error?) -&gt; Void in
+    if let error = error {
+        print("Failed to load the list of recent contents. \(error)")
+        // Handle error here
+    }
+    if let downloadResult: [AWSContent] = result {
+        // Handle successful result here
+        for content: AWSContent in downloadResult {
+            // Handle each of the item in the result
+        }
+    }
+})
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSContentManager *contentManager = [AWSContentManager contentManagerForKey:@"defaultManager"];
+[contentManager listRecentContentsWithPrefix:@"prefix"
+                           completionHandler:^(NSArray&lt;AWSContent *&gt; * result, NSError *error) {
+                                       if (error) {
+                                           NSLog(@"%@", error.description);
+                                       }
+                                       for (AWSContent *content in result) {
+                                           // Handle each of the item in result
+                                        }
+                                    }];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/clearCache" title="clearCache"></a>
+	<h3 class="method-title"><code><a href="#//api/name/clearCache">&ndash;&nbsp;clearCache</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes all cached contents. It does not modify the remote objects.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)clearCache</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/contentWithKey:" title="contentWithKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/contentWithKey:">&ndash;&nbsp;contentWithKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an instance of <code>AWSContent</code> for a given key. You can use this method to download content without first load its metadata using <code>- loadContentMetadataWithPrefix:marker:completionHandler:</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (AWSContent *)contentWithKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The key of the content.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An instance of <code>AWSContent</code>.</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSContentManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Amazon Web Services, Inc. All rights reserved. Updated: 2017-05-09</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

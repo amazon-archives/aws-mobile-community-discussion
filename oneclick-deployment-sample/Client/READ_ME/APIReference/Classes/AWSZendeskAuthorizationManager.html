@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AWSZendeskAuthorizationManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AWS iOS Mobile Hub Helper Library v1.0.0 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Amazon Web Services, Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/sharedInstance">+ sharedInstance</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/configureWithClientID:redirectURI:subdomain:">- configureWithClientID:redirectURI:subdomain:</option>
+		
+		<option value="//api/name/configureWithClientID:setCustomSchemeRedirectURI:httpsEndpoint:subdomain:">- configureWithClientID:setCustomSchemeRedirectURI:httpsEndpoint:subdomain:</option>
+		
+		<option value="//api/name/getSubdomain">- getSubdomain</option>
+		
+		<option value="//api/name/getTokenType">- getTokenType</option>
+		
+		<option value="//api/name/setScope:">- setScope:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AWSZendeskAuthorizationManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/AWSAuthorizationManager.html">AWSAuthorizationManager</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AWSZendeskAuthorizationManager.h<br />AWSZendeskAuthorizationManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/sharedInstance" title="sharedInstance"></a>
+	<h3 class="method-title"><code><a href="#//api/name/sharedInstance">+&nbsp;sharedInstance</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Singleton used to authorize user during OAuth2.0</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype _Nonnull)sharedInstance</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>the singleton</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSZendeskAuthorizationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/configureWithClientID:redirectURI:subdomain:" title="configureWithClientID:redirectURI:subdomain:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/configureWithClientID:redirectURI:subdomain:">&ndash;&nbsp;configureWithClientID:redirectURI:subdomain:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Customize the flow. This relies on the redirectURI being an Universal link.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)configureWithClientID:(NSString *_Nonnull)<em>clientID</em> redirectURI:(NSString *_Nonnull)<em>redirectURI</em> subdomain:(NSString *_Nonnull)<em>subdomain</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>clientID</code></th>
+						<td><p>The client ID that you signed up for in Zendesk</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>redirectURI</code></th>
+						<td><p>The redirect URI you provided Zendesk
+i.e. https://mysampleapp.amazonaws.com/zendesk/success</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>subdomain</code></th>
+						<td><p>The subdomain that you signed up for in Zendesk</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSZendeskAuthorizationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/configureWithClientID:setCustomSchemeRedirectURI:httpsEndpoint:subdomain:" title="configureWithClientID:setCustomSchemeRedirectURI:httpsEndpoint:subdomain:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/configureWithClientID:setCustomSchemeRedirectURI:httpsEndpoint:subdomain:">&ndash;&nbsp;configureWithClientID:setCustomSchemeRedirectURI:httpsEndpoint:subdomain:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>If you are unable to setup Universal links at this moment, then for development purposes
+you may consider use a HTTPS endpoint that you control to redirect to a custom app scheme url.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)configureWithClientID:(NSString *_Nonnull)<em>clientID</em> setCustomSchemeRedirectURI:(NSString *_Nonnull)<em>customSchemeRedirectURI</em> httpsEndpoint:(NSString *_Nonnull)<em>httpsEndpoint</em> subdomain:(NSString *_Nonnull)<em>subdomain</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>clientID</code></th>
+						<td><p>The client ID that you signed up for in Zendesk</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>customSchemeRedirectURI</code></th>
+						<td><p>The redirectURI that has the custom app scheme</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>httpsEndpoint</code></th>
+						<td><p>The HTTPS endpoint that needs to be registered with Zendesk.
+This endpoint must redirect the page to the customSchemeRedirectURI
+provided here.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>subdomain</code></th>
+						<td><p>The subdomain that you signed up for in Zendesk</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>Example:
+Endpoint HTML content at https://awsmobilehub.s3-us-west-2.amazonaws.com/zendesk
+<html></p>
+
+<script>window.location.href = "com.amazon.mysampleapp://zendesk/oauth2" + window.location.href;</script>
+
+
+<p></html></p>
+
+<p>customSchemeRedirectURI = @&ldquo;com.amazon.mysampleapp://zendesk/oauth2&rdquo;;
+httpsEndpoint = @&ldquo;https://awsmobilehub.s3-us-west-2.amazonaws.com/zendesk&rdquo;;</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSZendeskAuthorizationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/setScope:" title="setScope:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/setScope:">&ndash;&nbsp;setScope:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Available scopes:
+tickets
+users
+auditlogs (read only)
+organizations
+hc
+apps
+triggers
+automations
+targets</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (void)setScope:(NSString *_Nonnull)<em>scope</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>scope</code></th>
+						<td><p>Specify the amount of access the user would like.
+i.e. @&ldquo;read&rdquo;
+@&ldquo;read tickets:write&rdquo;
+@&ldquo;tickets:read tickets:write&rdquo;</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSZendeskAuthorizationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getTokenType" title="getTokenType"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getTokenType">&ndash;&nbsp;getTokenType</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The token type. Available after user authorizes app.
+i.e. Bearer</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *_Nullable)getTokenType</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The token type. Available after user authorizes app.
+i.e. Bearer</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSZendeskAuthorizationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/getSubdomain" title="getSubdomain"></a>
+	<h3 class="method-title"><code><a href="#//api/name/getSubdomain">&ndash;&nbsp;getSubdomain</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The subdomain that you signed up for in Zendesk.
+i.e. aws</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (NSString *_Nullable)getSubdomain</code></div>
+
+		    
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>The subdomain that you signed up for in Zendesk.
+i.e. aws</p>
+			</div>
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSZendeskAuthorizationManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Amazon Web Services, Inc. All rights reserved. Updated: 2017-05-09</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>

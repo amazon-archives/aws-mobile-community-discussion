@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>AWSUserFileManager Class Reference</title>
+
+	<link rel="stylesheet" href="../css/style.css">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1.4">
+	<meta name="generator" content="appledoc 2.2.1 (build 1334)">
+</head>
+<body class="appledoc">
+	<header>
+		<div class="container" class="hide-in-xcode">
+			
+			<h1 id="library-title">
+				<a href="../index.html">AWS iOS Mobile Hub Helper Library v1.0.0 </a>
+			</h1>
+
+			<p id="developer-home">
+				<a href="../index.html">Amazon Web Services, Inc.</a>
+			</p>
+			
+		</div>
+	</header>
+
+	<aside>
+		<div class="container">
+			<nav>
+				<ul id="header-buttons" role="toolbar">
+					<li><a href="../index.html">Index</a></li>
+<li><a href="../hierarchy.html">Hierarchy</a></li>
+
+					<li id="on-this-page" role="navigation">
+						<label>
+							On This Page
+
+							<div class="chevron">
+								<div class="chevy chevron-left"></div>
+								<div class="chevy chevron-right"></div>
+							</div>
+
+							<select id="jump-to">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+
+	
+	
+	<optgroup label="Properties">
+		
+		<option value="//api/name/uploadingContents">uploadingContents</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Class Methods">
+		
+		<option value="//api/name/UserFileManagerForKey:">+ UserFileManagerForKey:</option>
+		
+		<option value="//api/name/defaultUserFileManager">+ defaultUserFileManager</option>
+		
+		<option value="//api/name/registerUserFileManagerWithConfiguration:forKey:">+ registerUserFileManagerWithConfiguration:forKey:</option>
+		
+		<option value="//api/name/removeUserFileManagerForKey:">+ removeUserFileManagerForKey:</option>
+		
+	</optgroup>
+	
+
+	
+	<optgroup label="Instance Methods">
+		
+		<option value="//api/name/localContentWithData:key:">- localContentWithData:key:</option>
+		
+	</optgroup>
+	
+	
+</select>
+						</label>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+	<article>
+		<div id="overview_contents" class="container">
+			<div id="content">
+				<main role="main">
+					<h1 class="title">AWSUserFileManager Class Reference</h1>
+
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<th>Inherits from</th>
+	<td><a href="../Classes/AWSContentManager.html">AWSContentManager</a> : NSObject</td>
+</tr><tr>
+	<th>Declared in</th>
+	<td>AWSUserFileManager.h<br />AWSUserFileManager.m</td>
+</tr>
+						</tbody></table></div>
+					
+
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>AWSUserFileManager</code> inherits from <code>AWSContentManager</code> and adds the upload capabilities.</p>
+
+<p>The User File Manager uploads and downloads files from Amazon S3. It caches downloaded
+files locally on the device in a size-limited cache. Downloaded files may be pinned
+to the cache, so that they are not automatically removed when the cache size limit
+is exceeded. The User File Manager provides access to two folders in the Amazon S3 bucket,
+one called &ldquo;public/&rdquo; for public files, which are accessible to any user of the app,
+and one called &ldquo;private/&rdquo; which contains a sub-folder for each Amazon Cognito
+identified user. Files in the user&rsquo;s private folder can only be accessed by that user.
+The User File Manager serves as the application&rsquo;s interface into the file-related
+functionality of the User Data Storage feature.
+Requires the AWSS3 framework of AWSiOSSDK.</p>
+					</div>
+					
+					
+
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						
+
+						
+						
+
+						<div class="task-list">
+							<div class="section-method">
+	<a name="//api/name/uploadingContents" title="uploadingContents"></a>
+	<h3 class="method-title"><code><a href="#//api/name/uploadingContents">&nbsp;&nbsp;uploadingContents</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>The list of currently uploading contents.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>@property (nonatomic, readonly) NSArray&lt;AWSLocalContent*&gt; *uploadingContents</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSUserFileManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/defaultUserFileManager" title="defaultUserFileManager"></a>
+	<h3 class="method-title"><code><a href="#//api/name/defaultUserFileManager">+&nbsp;defaultUserFileManager</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns the default User File Manager singleton instance configured using the information provided in <code>Info.plist</code> file.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)defaultUserFileManager</code></div>
+
+		    
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>let userFileManager = AWSUserFileManager.defaultUserFileManager()
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSUserFileManager *userFileManager = [AWSUserFileManager defaultUserFileManager];
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSUserFileManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/registerUserFileManagerWithConfiguration:forKey:" title="registerUserFileManagerWithConfiguration:forKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/registerUserFileManagerWithConfiguration:forKey:">+&nbsp;registerUserFileManagerWithConfiguration:forKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Creates a helper client for AWSUserFileManager for specified configuration with mentioned key.
+Use this method only if you require a helper client with specific configuration.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)registerUserFileManagerWithConfiguration:(AWSUserFileManagerConfiguration *)<em>userFileManagerConfiguration</em> forKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>userFileManagerConfiguration</code></th>
+						<td><p>AWSUserFileManagerConfiguration object for the manager.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p>For example, set the configuration in <code>- application:didFinishLaunchingWithOptions:</code></p>
+
+<p><em>Swift</em></p>
+
+<pre><code> func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -&gt; Bool {
+    let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+    let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
+    let userFileManagerConfiguration = AWSUserFileManagerConfiguration(bucketName: "myBucket", serviceConfiguration: configuration)
+    AWSUserFileManager.register(with: userFileManagerConfiguration, forKey: "USWest2BucketManager")
+
+    return true
+ }
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code> - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+                                                                                                    identityPoolId:@"YourIdentityPoolId"];
+    AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
+    credentialsProvider:credentialsProvider];
+    AWSUserFileManagerConfiguration *userFileManagerConfiguration = [[AWSUserFileManager alloc] initWithBucketName:@"myBucketName"
+                                                                                              serviceConfiguration:configuration];
+    [AWSUserFileManager registerUserFileManagerWithConfiguration:userFileManagerConfiguration 
+                                                          forKey:@"USWest2BucketManager"];
+
+    return YES;
+ }
+</code></pre>
+
+<p>Then call the following to get the helper client:</p>
+
+<p><em>Swift</em></p>
+
+<pre><code>let userFilemanager = AWSUserFileManager(forKey: "USWest2BucketManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSUserFileManager *userFileManager = [AWSUserFileManager userFileManagerForKey:@"USWest2BucketManager"];
+</code></pre><div class="warning"><p><strong>Warning:</strong> After calling this method, do not modify the configuration object. It may cause unspecified behaviors.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSUserFileManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/UserFileManagerForKey:" title="UserFileManagerForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/UserFileManagerForKey:">+&nbsp;UserFileManagerForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Retrieves the helper client associated with the key. You need to call <code>+ registerUserFileManagerWithConfiguration:forKey:</code> before invoking this method. If <code>+ registerUserFileManagerWithConfiguration:forKey:</code> has not been called in advance or the key does not exist, this method returns <code>nil</code>.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (instancetype)UserFileManagerForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An instance of AWSUserFileManager for specified key.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
+let userFileManagerConfiguration = AWSUserFileManagerConfiguration(bucketName: "myBucket", serviceConfiguration: configuration)
+AWSUserFileManager.register(with: userFileManagerConfiguration, forKey: "USWest2BucketManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+                                                                                                identityPoolId:@"YourIdentityPoolId"];
+AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
+credentialsProvider:credentialsProvider];
+AWSUserFileManagerConfiguration *userFileManagerConfiguration = [[AWSUserFileManager alloc] initWithBucketName:@"myBucketName"
+                                                                                          serviceConfiguration:configuration];
+[AWSUserFileManager registerUserFileManagerWithConfiguration:userFileManagerConfiguration 
+                                                      forKey:@"USWest2BucketManager"];
+</code></pre>
+
+<p>Then call the following to get the helper client:</p>
+
+<p><em>Swift</em></p>
+
+<p>let UserFilemanager = AWSUserFileManager(forKey: &ldquo;USWest2BucketManager&rdquo;)</p>
+
+<p><em>Objective-C</em></p>
+
+<p>AWSUserFileManager *UserFileManager = [AWSUserFileManager UserFileManagerForKey:@&ldquo;USWest2BucketManager&rdquo;];</p>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSUserFileManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/removeUserFileManagerForKey:" title="removeUserFileManagerForKey:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/removeUserFileManagerForKey:">+&nbsp;removeUserFileManagerForKey:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Removes the helper client associated with the key and release it.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>+ (void)removeUserFileManagerForKey:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>A string to identify the helper client.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>AWSUserFileManager.remove(forKey: "USWest2BucketManager")
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>[AWSUserFileManager removeUserFileManagerForKey:@"USWest2BucketManager"];
+</code></pre><div class="warning"><p><strong>Warning:</strong> Before calling this method, make sure no method is running on this client.</p></div>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSUserFileManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div><div class="section-method">
+	<a name="//api/name/localContentWithData:key:" title="localContentWithData:key:"></a>
+	<h3 class="method-title"><code><a href="#//api/name/localContentWithData:key:">&ndash;&nbsp;localContentWithData:key:</a></code>
+</h3>
+
+	<div class="method-info">
+		<div class="pointy-thing"></div>
+
+		<div class="method-info-container">
+			
+			
+			<div class="method-subsection brief-description">
+				<p>Returns an instance of <code>AWSLocalContent</code>. You use this method to create an instance of <code>AWSLocalContent</code> to upload data to an Amazon S3 bucket with the specified key.</p>
+			</div>
+			
+		    
+
+			<div class="method-subsection method-declaration"><code>- (AWSLocalContent *)localContentWithData:(nullable NSData *)<em>data</em> key:(NSString *)<em>key</em></code></div>
+
+		    
+			
+			<div class="method-subsection arguments-section parameters">
+				<h4 class="method-subtitle parameter-title">Parameters</h4>
+				<table class="argument-def parameter-def">
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>data</code></th>
+						<td><p>The data to be uploaded.</p></td>
+					</tr>
+				
+					<tr>
+						<th scope="row" class="argument-name"><code>key</code></th>
+						<td><p>The Amazon S3 key.</p></td>
+					</tr>
+				
+				</table>
+			</div>
+			
+
+			
+			<div class="method-subsection return">
+				<h4 class="method-subtitle parameter-title">Return Value</h4>
+				<p>An instance of <code>AWSLocalContent</code> that represents data to be uploaded.</p>
+			</div>
+			
+
+			
+
+			
+			<div class="method-subsection discussion-section">
+				<h4 class="method-subtitle">Discussion</h4>
+				<p><em>Swift</em></p>
+
+<pre><code>func uploadWithData(data: NSData, forKey key: String) {
+
+    let userFilemanager = AWSUserFileManager(forKey: "KeyUsedToRegister")
+    let localContent = userFilemanager.localContent(with: data, key: key)
+    localContent.uploadWithPinOnCompletion(..., progressBlock: ..., completionHandler: ...)
+}
+</code></pre>
+
+<p><em>Objective-C</em></p>
+
+<pre><code>- (void)uploadWithData:(NSData *)data forKey:(NSString *)key {
+
+    AWSUserFileManager *userFileManager = [AWSUserFileManager userFileManagerForKey:@"KeyUsedToRegister"];
+    AWSLocalContent *localContent = [self.manager localContentWithData:data
+                                                                   key:key];
+    [localContent uploadWithPinOnCompletion:...
+                              progressBlock:...
+                          completionHandler:...];
+}
+</code></pre>
+			</div>
+			
+
+			
+
+			
+
+			
+			<div class="method-subsection declared-in-section">
+				<h4 class="method-subtitle">Declared In</h4>
+				<p><code class="declared-in-ref">AWSUserFileManager.h</code></p>
+			</div>
+			
+			
+		</div>
+	</div>
+</div>
+						</div>
+						
+					</div>
+					
+					
+
+                    
+                    
+          
+				</main>
+
+				<footer>
+					<div class="footer-copyright">
+						
+						<p class="copyright">Copyright &copy; 2017 Amazon Web Services, Inc. All rights reserved. Updated: 2017-05-09</p>
+						
+						
+						<p class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2.1 (build 1334)</a>.</p>
+						
+					</div>
+				</footer>
+			</div>
+		</div>
+	</article>
+
+	<script src="../js/script.js"></script>
+</body>
+</html>
