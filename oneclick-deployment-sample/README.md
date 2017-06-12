@@ -30,6 +30,6 @@ To create a **Deploy to AWS Mobile Hub** button, first export your AWS Mobile Hu
 1.  Log in to the AWS Console and select the [Mobile Hub console](https://console.aws.amazon.com/mobilehubhome?#/).
 2.  Click the triple-dots in the top-right corner of the card for the project you wish to export.
 3.  Click **Export (file)**.
-4.  You will download a ZIP file containing the exported site.  You can unpack this ZIP file and modify the contents, but be careful to pack the ZIP file back up again such that the directory structure is identical to the original file.
-5.  Check the ZIP file in to your GitHub repository.
-6.  Add a button to your README.md file.   Use the button above as a model for creating your own button.
+4.  Check the downloaded ZIP file in to your GitHub repository.
+5.  Add a button to your README.md file.   Use the button above as a model for creating your own button.
+
