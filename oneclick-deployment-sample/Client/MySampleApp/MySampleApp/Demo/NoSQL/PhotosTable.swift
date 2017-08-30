@@ -106,9 +106,10 @@ class PhotosTable: NSObject, Table {
         
 
         objectMapper.save(itemForGet, completionHandler: {(error: Error?) -> Void in
-            if let error = error as? NSError {
+            if let error = error {
+                let nserror = error as NSError
                 DispatchQueue.main.async(execute: {
-                    errors.append(error)
+                    errors.append(nserror)
                 })
             }
             group.leave()
@@ -149,9 +150,9 @@ class PhotosTable: NSObject, Table {
         queryExpression.expressionAttributeValues = [":userId": AWSIdentityManager.default().identityId!,]
 
         objectMapper.query(Photos.self, expression: queryExpression) { (response: AWSDynamoDBPaginatedOutput?, error: Error?) in
-            if let error = error as? NSError {
+            if let error = error {
                 DispatchQueue.main.async(execute: {
-                    completionHandler([error]);
+                    completionHandler([error as NSError]);
                     })
             } else {
                 var errors: [NSError] = []
@@ -159,9 +160,9 @@ class PhotosTable: NSObject, Table {
                 for item in response!.items {
                     group.enter()
                     objectMapper.remove(item, completionHandler: {(error: Error?) in
-                        if let error = error as? NSError {
+                        if let error = error  {
                             DispatchQueue.main.async(execute: {
-                                errors.append(error)
+                                errors.append(error as NSError)
                             })
                         }
                         group.leave()
@@ -187,9 +188,11 @@ class PhotosTable: NSObject, Table {
         
         
         objectMapper.save(itemToUpdate, completionHandler: {(error: Error?) in
-            DispatchQueue.main.async(execute: {
-                completionHandler(error as? NSError)
-            })
+            if let error = error {
+                DispatchQueue.main.async(execute: {
+                    completionHandler(error as NSError)
+                })
+            }
         })
     }
     
@@ -197,9 +200,11 @@ class PhotosTable: NSObject, Table {
         let objectMapper = AWSDynamoDBObjectMapper.default()
         
         objectMapper.remove(item, completionHandler: {(error: Error?) in
-            DispatchQueue.main.async(execute: {
-                completionHandler(error as? NSError)
-            })
+            if let error = error {
+                DispatchQueue.main.async(execute: {
+                    completionHandler(error as NSError)
+                })
+            }
         })
     }
 }

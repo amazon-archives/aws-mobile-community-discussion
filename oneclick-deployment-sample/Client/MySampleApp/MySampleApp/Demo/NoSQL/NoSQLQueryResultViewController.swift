@@ -92,9 +92,9 @@ class NoSQLQueryResultViewController: UITableViewController {
         loading = true
         paginatedOutput?.loadNextPage(completionHandler: {(error: Error?) in
             if error != nil {
-                print("Failed to load more results: \(error)")
+                print("Failed to load more results: \(String(describing: error))")
                 DispatchQueue.main.async(execute: {
-                    self.showAlertWithTitle("Error", message: "Failed to load more more results: \(error?.localizedDescription)")
+                    self.showAlertWithTitle("Error", message: "Failed to load more more results: \(String(describing: error?.localizedDescription))")
                 })
             }
             else {

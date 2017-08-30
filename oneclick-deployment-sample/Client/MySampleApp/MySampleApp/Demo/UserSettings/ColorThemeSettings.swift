@@ -39,7 +39,7 @@ class ColorThemeSettings {
         let userSettings: AWSCognitoDataset = syncClient.openOrCreateDataset("user_settings")
         
         userSettings.synchronize().continueWith { (task: AWSTask<AnyObject>) -> Any? in
-            if let error = task.error as? NSError {
+            if let error = task.error {
                 print("loadSettings error: \(error)")
                 completionBlock(nil, error)
                 return nil

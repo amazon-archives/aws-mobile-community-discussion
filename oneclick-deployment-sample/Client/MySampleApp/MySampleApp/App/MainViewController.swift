@@ -118,7 +118,7 @@ class MainViewController: UITableViewController {
         let settings = ColorThemeSettings.sharedInstance
         settings.loadSettings { (themeSettings: ColorThemeSettings?, error: Error?) -> Void in
             guard let themeSettings = themeSettings else {
-                 print("Failed to load color: \(error)")
+                 print("Failed to load color: \(String(describing: error))")
                 return
             }
             DispatchQueue.main.async(execute: {
