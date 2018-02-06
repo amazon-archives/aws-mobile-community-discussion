@@ -3,7 +3,7 @@
 This sample demonstrates the use of the "Deploy to AWS Mobile Hub" button.  Click on the button below to import the AWS cloud components of this project (stored in the photoapptemplate.zip file) into your AWS Mobile Hub console.
 
 <p align="center">
-<a target="_blank" href="https://console.aws.amazon.com/mobilehub/home?#/?config=https://github.com/aws/aws-mobile-community-discussion/blob/master/oneclick-deployment-sample/photoapptemplate.zip">
+<a target="_blank" href="https://console.aws.amazon.com/mobilehub/home?#/?config=https://github.com/aws/aws-mobile-community-discussion/blob/master/oneclick-deployment-sample/photoapptemplate.zip&app=web">
 <span>
     <img height="100%" src="https://s3.amazonaws.com/deploytomh/button-deploy-aws-mh.png"/>
 </span>
