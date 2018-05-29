@@ -44,9 +44,10 @@ class UserPoolForgotPasswordViewController: UIViewController {
         self.user?.forgotPassword().continueWith(block: {[weak self] (task: AWSTask) -> AnyObject? in
             guard let strongSelf = self else {return nil}
             DispatchQueue.main.async(execute: {
-                if let error = task.error as? NSError {
-                    let alert = UIAlertController(title: error.userInfo["__type"] as? String,
-                                                  message:error.userInfo["message"] as? String,
+                if let error = task.error {
+                    let nserror = error as NSError
+                    let alert = UIAlertController(title: nserror.userInfo["__type"] as? String,
+                                                  message:nserror.userInfo["message"] as? String,
                                                   preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
                     strongSelf.present(alert, animated: true, completion:nil)

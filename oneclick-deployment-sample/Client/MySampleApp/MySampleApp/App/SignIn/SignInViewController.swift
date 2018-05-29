@@ -123,9 +123,9 @@ class SignInViewController : UIViewController {
     
     func handleLoginWithSignInProvider(_ signInProvider: AWSSignInProvider) {
         AWSSignInManager.sharedInstance().login(signInProviderKey: signInProvider.identityProviderName, completionHandler: {(result: Any?, authState: AWSIdentityManagerAuthState, error: Error?) in
-            print("result = \(result), error = \(error)")
+            print("result = \(String(describing: result)), error = \(String(describing: error))")
             // If no error reported by SignInProvider, discard the sign-in view controller.
-            if error == nil {
+            guard let localerror = error else {
                 DispatchQueue.main.async(execute: {
                     self.dismiss(animated: true, completion: nil)
                     if let didCompleteSignIn = self.didCompleteSignIn {
@@ -134,7 +134,7 @@ class SignInViewController : UIViewController {
                 })   
                 return
             }
-            self.showErrorDialog(signInProvider.identityProviderName, withError: error as! NSError)
+            self.showErrorDialog(signInProvider.identityProviderName, withError: localerror as NSError)
         })
     }
     

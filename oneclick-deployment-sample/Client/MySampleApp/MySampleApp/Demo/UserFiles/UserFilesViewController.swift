@@ -384,7 +384,7 @@ class UserFilesViewController: UITableViewController {
         content.getRemoteFileURL {[weak self] (url: URL?, error: Error?) in
             guard let strongSelf = self else { return }
             guard let url = url else {
-                print("Error getting URL for file. \(error)")
+                print("Error getting URL for file. \(String(describing: error))")
                 return
             }
             if content.isAudioVideo() { // Open Audio and Video files natively in app.
